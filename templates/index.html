@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PODO Yann Théophile - Portfolio </title>
+    <meta name="description" content="Portfolio de PODO Yann Théophile, étudiant en Génie Logiciel spécialisé en Data Engineering et Intelligence Artificielle.">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/vibestyle.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#accueil" class="logo">YANN<span>THEO</span></a>
+            
+            <div class="nav-toggle" id="navToggle" aria-label="Menu de navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#apropos">À propos</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="{{ url_for('static' ,filename='cv/cv_podo_yann.pdf') }}" target="_blank" download="CV_Podo_Yann.pdf" class="btn-cv">Mon CV</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Section Hero / Accueil -->
+    <section id="accueil" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="greeting">Hello, I am </span>
+                    <span class="name">PODO YANN THEOPHILE</span>
+                    <span class="title">Développeur Junior </span>
+                </h1>
+                
+                <p class="hero-description">
+                    Passionné par le <strong>développement logiciel</strong>, l'<strong>intelligence artificielle</strong> 
+                    et l'<strong>analyse de données</strong>. Je crée des solutions innovantes pour résoudre 
+                    des problèmes complexes.
+                </p>
+                
+                <div class="hero-buttons">
+                    <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="number">2+</span>
+                        <span class="label">Projets réalisés</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">5+</span>
+                        <span class="label">Technologies maîtrisées</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">100%</span>
+                        <span class="label">Motivé</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="{{url_for('static',filename='img/image1.jpeg')}}" alt="Photo de PODO Yann Théophile">
+                    <div class="tech-icons">
+                        <i class="fab fa-python" title="Python"></i>
+                        <i class="fas fa-database" title="Bases de données"></i>
+                        <i class="fab fa-js" title="JavaScript"></i>
+                        <i class="fab fa-git-alt" title="Git"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="apropos" class="section about">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Qui suis-je ?</h3>
+                    <p>
+                        Étudiant en <strong>Génie Logiciel</strong> passionné par la technologie et l'innovation. 
+                        Je me spécialise dans le développement d'applications intelligentes et l'analyse de données.
+                    </p>
+                    
+                    <p>
+                        Mon objectif est de devenir <strong>Data Science/ML Engineer</strong> et contribuer 
+                        au développement technologique en Afrique. Je crois au pouvoir de la data pour 
+                        résoudre des problèmes concrets.
+                    </p>
+                    
+                    <div class="about-info">
+                        <div class="info-item">
+                            <span class="info-label">Nom :</span>
+                            <span class="info-value">PODO Yann Théophile</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Localisation :</span>
+                            <span class="info-value">Douala-Cameroun</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email :</span>
+                            <span class="info-value">podoyanntheophile@gmail.com</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Disponibilité :</span>
+                            <span class="info-value">Recherche stage/alternance</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-education">
+                    <h3>Formation</h3>
+                    
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2026 - Présent</div>
+                            <div class="timeline-content">
+                                <h4>Licence en Génie Logiciel</h4>
+                                <p>Institut Universitaire du Golf</p>
+                                <p class="timeline-desc">
+                                    Spécialisation : Génie Logiciel
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-date">2025</div>
+                            <div class="timeline-content">
+                                <h4>BTS(Brevet de Technicien Superieur)</h4>
+                                <p>Institut Universitaire du Golf</p>
+                                <p class="timeline-desc">
+                                    Spécialisation : Génie Logiciel
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="competences" class="section skills">
+        <div class="container">
+            <h2 class="section-title">Mes Compétences</h2>
+            
+            <div class="skills-grid">
+                <!-- Langages de programmation -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-code" aria-hidden="true"></i> Langages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 90%" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 75%" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        
+                        <div class="skill-item">
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-level" style="width: 85%" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Technologies Data -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-chart-line" aria-hidden="true"></i> Data Science</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Pandas</span>
+                        <span class="skill-tag">NumPy</span>
+                        <span class="skill-tag">Matplotlib</span>
+                        <span class="skill-tag">Seaborn</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Jupyter</span>
+                        <!--<span class="skill-tag">Power BI</span>  -->
+                        
+                    </div>
+                </div>
+                
+                <!-- Développement -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code" aria-hidden="true"></i> Développement</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Csharp</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Python-Flask</span>
+                        <span class="skill-tag">Git/GitHub</span>
+                    </div>
+                </div>
+                
+                <!-- Soft Skills -->
+                <div class="skill-category">
+                    <h3><i class="fas fa-users" aria-hidden="true"></i> Soft Skills</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Résolution problèmes</span>
+                        <span class="skill-tag">Travail d'équipe</span>
+                        <span class="skill-tag">Communication</span>
+                        <span class="skill-tag">Adaptabilité</span>
+                        <span class="skill-tag">Curiosité</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projets" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Mes Projets</h2>
+            
+            <div class="projects-filter" role="tablist">
+                <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">Tous</button>
+                <button class="filter-btn" data-filter="data" role="tab" aria-selected="false">Data Analysis</button>
+                <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web Dev</button>
+                <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">AI/ML</button>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Projet 1 :Gestion d'un etablissement scolaire -->
+                <div class="project-card" data-category="data">
+                    <div class="project-image">
+                        <img src="{{url_for('static',filename='img/school.png')}}" alt="Application de Gestion d'un etablissement scolaire">
+                        <div class="project-links">
+                            <a href="https://github.com/tonuser/sales-analysis" target="_blank" aria-label="Code source sur GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="demo-link" aria-label="Démo du projet">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Application de Gestion d'un etablissement scolaire</h3>
+                        <p>
+                            Application de Gestion d'un etablissement scolaire Avec C#,WinForms
+                        </p>
+                        <div class="project-tech">
+                            <span>Windows forms</span>
+                            <span>Csharp</span>
+                            <span>Mysql</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 3 : Portfolio (celui-ci!) -->
+                <div class="project-card" data-category="web">
+                    <div class="project-image">
+                        <img src="{{url_for('static',filename='img/Capture.png')}}" alt="Portfolio web - Capture d'écran">
+                        <div class="project-links">
+                            <a href="https://github.com/tonuser/portfolio" target="_blank" aria-label="Code source sur GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="demo-link" aria-label="Démo du projet">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Portfolio Développeur</h3>
+                        <p>
+                            Portfolio responsive développé avec HTML, CSS et JavaScript. 
+                            Design moderne avec animations et filtrage de projets.
+                        </p>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>Responsive</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 4 : API Data -->
+                <div class="project-card" data-category="web data">
+                    <div class="project-image">
+                        <img src="{{url_for('static',filename='img/dashbord.jpg')}}" alt="API Data - Documentation Swagger">
+                        <div class="project-links">
+                            <a href="https://github.com/tonuser/data-api" target="_blank" aria-label="Code source sur GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>API REST pour données météo</h3>
+                        <p>
+                            API FastAPI pour servir des données météorologiques africaines 
+                            avec endpoints pour analyse et visualisation.
+                        </p>
+                        <div class="project-tech">
+                            <span>FastAPI</span>
+                            <span>Python</span>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-more">
+                <a href="https://github.com/tonuser" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-github"></i> Voir plus sur GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">Contactez-moi</h2>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Travaillons ensemble !</h3>
+                    <p>
+                        Je suis ouvert aux opportunités de stage, alternance ou projets freelance. 
+                        N'hésitez pas à me contacter pour discuter de vos besoins.
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:yann.podo@email.com">podoyanntheophile@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-phone" aria-hidden="true"></i>
+                            <div>
+                                <h4>Téléphone</h4>
+                                <a href="tel:+237620679968">+237 620679968</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                            <div>
+                                <h4>Localisation</h4>
+                                <p>Douala, Cameroun</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/tonuser" target="_blank" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/podo-yann-theophile-9918442b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+               
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm" action="{{url_for('index')}}" method="POST">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required aria-label="Votre nom">
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Votre email" required aria-label="Votre email">
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Sujet" required aria-label="Sujet du message">
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Votre message" required aria-label="Votre message"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Envoyer le message
+                        </button>
+                        <script src="{{ url_for('static', filename='js/portfolio.js') }}"></script>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <a href="#accueil" class="footer-logo">YANN<span>THEO</span></a>
+                
+                <p class="footer-text">
+                    Développeur passionné par la data et de la programmation. Toujours en apprentissage.
+                </p>
+                
+                <div class="footer-links">
+                    <a href="#accueil">Accueil</a>
+                    <a href="#apropos">À propos</a>
+                    <a href="#competences">Compétences</a>
+                    <a href="#projets">Projets</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://github.com/tonuser" target="_blank" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/podo-yann-theophile-9918442b6?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+                
+                <p class="footer-copyright">
+                    &copy; 2024 PODO Yann Théophile. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton retour en haut -->
+    <a href="#accueil" class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+</body>
+</html>
