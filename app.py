@@ -1,15 +1,17 @@
 from flask import Flask,request,render_template,flash
 from flask_mail import Mail, Message
 import secrets
-
+import os
 app = Flask(__name__)
 app.secret_key=secrets.token_hex(16)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
-app.config['MAIL_USERNAME'] = 'podoyanntheophile@gmail.com'
-app.config['MAIL_PASSWORD'] = 'yfyg fses zcef fyze'
+app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] =os.environ.get('MAIL_PASSWORD')
+app.config['MAIL_DEFAULT_SENDER']=os.environ.get('MAIL_USERNAME')                   # 'yfyg fses zcef fyze'
 app.config['MAIL_USE_TLS'] = True
 app.config['MAIL_USE_SSL'] = False
+app.config['MAIL_TIMEOUT']=20
 
 mail = Mail(app)
 
